@@ -1,0 +1,38 @@
+{
+    "manifestVersion": 1,
+    "id": "mtess-frw-deploiement",
+    "publisher": "MTESS",
+    "version": "1.0.15",
+    "name": "MTESS - Déploiement de formulaires",
+    "description": "Une extension simple pour déployer ses formulaires FRW.",
+    "public": true,
+    "categories": ["Azure Pipelines"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/icon-400.png"
+    },
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "Deploiement",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Deploiement"
+            }
+        }
+    ],
+    "files": [{
+        "path": "Deploiement"
+    }]
+}
