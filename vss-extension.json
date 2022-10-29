@@ -12,12 +12,29 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
+    "branding": {
+        "color": "#DAE6F0"
+      },
     "icons": {
         "default": "images/icon-400.png"
     },
+    "screenshots": [
+        {
+          "path": "images/screen1.png"
+        }
+      ],
     "content": {
         "details": {
             "path": "details.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/MTESSDev/azurepipeline-mtess-frw-deploiement"
+    },
+    "links": {
+        "support": {
+          "uri": "https://github.com/MTESSDev/azurepipeline-mtess-frw-deploiement/issues"
         }
     },
     "contributions": [
