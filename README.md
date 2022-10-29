@@ -1,4 +1,5 @@
 # azurepipeline-mtess-frw-deploiement
 
-Permet de déployer ses formulaires dans FRW.
+Pour compiler et produire le .vsix il suffit de faire :
 
+npx tfx-cli extension create
