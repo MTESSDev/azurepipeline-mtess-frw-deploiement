@@ -13,7 +13,8 @@
         }
     ],
     "branding": {
-        "color": "#DAE6F0"
+        "color": "#DAE6F0",
+        "theme": "dark"
       },
     "icons": {
         "default": "images/icon-400.png"
@@ -51,5 +52,9 @@
     ],
     "files": [{
         "path": "Deploiement"
+    },
+    {
+        "path": "images",
+        "addressable": true
     }]
 }

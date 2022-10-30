@@ -1,3 +1,5 @@
+> Consultez la version de cette aide sur [github](https://github.com/MTESSDev/azurepipeline-mtess-frw-deploiement/blob/main/README.md) pour être certain d'utiliser la version la plus à jour.
+
 L'utilisation est aussi simple que n'importe quelle extension DevOps.
 
 Pour débuter il faut installer l'extension, il peut-être nécessaire de la faire ajouter par une équipe d'administrateur Azure.
@@ -5,8 +7,6 @@ Pour débuter il faut installer l'extension, il peut-être nécessaire de la fai
 Par la suite est sera disponible dans la liste des extensions des pipelines de `Build` et de `Release`.
 
 ![Configuration standard](images/screen1.png)
-
-Les étapes recommandées sont:
 
 ## Déplacer d'abord les fichiers d'un seul formulaire dans un répertoire
 
@@ -35,9 +35,11 @@ staging
     │   etc...
 ```
 
-> Cette étape permet de ne sélectionner qu'un seul formulaire, si vous désirez déployer plus d'un formulaire à toutes les fois il est possible de sélectionner plus d'un dossier. Notez cependant que l'arborescence finale dans votre staging doit être d'un répertoire par formulaire (chaque répertoire de formulaire contenant ses fichiers de config. form, transmission et autres)
+> Cette étape permet de ne sélectionner qu'un seul formulaire, si vous désirez déployer plus d'un formulaire à toutes les fois, il est possible de sélectionner plus d'un dossier. Notez cependant que l'arborescence finale dans votre staging doit être d'un répertoire par formulaire (chaque répertoire de formulaire contenant ses fichiers de config. form, transmission et autres)
 
-### Lancez ensuite l'outil de déploiement des formulaires
+## Lancez ensuite l'outil de déploiement des formulaires
+
+Voici un exemple de configuration avec l'interface graphique:
 
 ![Configuration outil](images/screen3.png)
 
@@ -62,7 +64,7 @@ Il faut inscrire dans l'interface ou dans le `YAML`
 - Votre numéro public de système autorisé (normalement un GUID)
 - Votre clée API privée (il est fortement suggéré de la passer en varaible de déploiement de type `SECRET` pour que personne le puisse la récupérer plus tard)
 
-### Lancer le pipeline nouvellement créé
+## Lancer le pipeline nouvellement créé
 
 Une fois le traitement complété, vous devriez retrouver votre formulaire sur le serveur en inscrivant une URL comme:
 https://formulaires.mtess.gouv.qc.ca/Form/$1/$2
@@ -70,10 +72,18 @@ https://formulaires.mtess.gouv.qc.ca/Form/$1/$2
 1. Est votre id numérique de système autorisé (ex: 1)
 2. Est le nom du dossier donné lors du déploiement (ci-haut `CRQ001`), gardez vos noms de formulaires _simple_ et _concis_.
 
-## Pour compiler cet outil ...
-> cette note n'est utile que pour les developpeur de cette extension.
+## Pour compiler cet outil (uniquement pour les développeurs de l'extension)
 
 Pour compiler et produire le .vsix il suffit de faire :
+
+Prérequis : Installer node (npm)
+
+Installer npx
+
+```
+npm install -g npx
+```
+Lancer le build de l'extension
 
 ```
 npx tfx-cli extension create
