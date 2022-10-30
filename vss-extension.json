@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "mtess-frw-deploiement",
     "publisher": "MTESS",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "name": "MTESS - Déploiement de formulaires",
     "description": "Une extension simple pour déployer ses formulaires FRW.",
     "public": true,
@@ -13,7 +13,7 @@
         }
     ],
     "branding": {
-        "color": "#DAE6F0",
+        "color": "#095797",
         "theme": "dark"
       },
     "icons": {
