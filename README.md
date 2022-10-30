@@ -2,7 +2,7 @@
 
 L'utilisation est aussi simple que n'importe quelle extension DevOps.
 
-Pour débuter il faut installer l'extension, il peut-être nécessaire de la faire ajouter par une équipe d'administrateur Azure.
+Pour débuter il faut installer l'extension, il peut-être nécessaire de la faire ajouter par une équipe d'admin Azure.
 
 Par la suite, elle sera disponible dans la liste des extensions des pipelines de `Build` et de `Release`.
 
