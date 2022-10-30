@@ -4,7 +4,7 @@ L'utilisation est aussi simple que n'importe quelle extension DevOps.
 
 Pour débuter il faut installer l'extension, il peut-être nécessaire de la faire ajouter par une équipe d'administrateur Azure.
 
-Par la suite est sera disponible dans la liste des extensions des pipelines de `Build` et de `Release`.
+Par la suite, elle sera disponible dans la liste des extensions des pipelines de `Build` et de `Release`.
 
 ![Configuration standard](images/screen1.png)
 
@@ -12,7 +12,7 @@ Par la suite est sera disponible dans la liste des extensions des pipelines de `
 
 ![Configuration copie](images/screen2.png)
 
-Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop" (dépôt drop créer lors d'un build déclenché au commit) git vers le répertoire de staging du même nom soit `CRQ001`.
+Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop" (dépôt drop créé lors d'un build déclenché au commit) git vers le répertoire de staging du même nom soit `CRQ001`.
 
 #### Exemple d'arborescence
 ```yaml
@@ -70,7 +70,7 @@ Une fois le traitement complété, vous devriez retrouver votre formulaire sur l
 https://formulaires.mtess.gouv.qc.ca/Form/$1/$2
 
 1. Est votre id numérique de système autorisé (ex: 1)
-2. Est le nom du dossier donné lors du déploiement (ci-haut `CRQ001`), gardez vos noms de formulaires _simple_ et _concis_.
+2. Est le nom du dossier donné lors du déploiement (ci-haut `CRQ001`), gardez vos noms de formulaires _simples_ et _concis_.
 
 ## Pour compiler cet outil (uniquement pour les développeurs de l'extension)
 
