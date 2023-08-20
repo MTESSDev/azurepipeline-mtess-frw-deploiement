@@ -16,23 +16,23 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 
 #### Exemple d'arborescence
 ```yaml
-staging
-│   default.v0.yml  #(facultatif, s'appliquera à TOUS les formulaires)  
-│   transmission.v0.yaml #(facultatif, s'appliquera à TOUS les formulaires)    
+📁 staging
+│    default.v0.yml  #(facultatif, s'appliquera à TOUS les formulaires)  
+│    transmission.v0.yaml #(facultatif, s'appliquera à TOUS les formulaires)    
 │
-└───CRQ001
-│   │   CRQ001.v1.form.yml
-│   │   CRQ001.v1.bind.yml #(facultatif)
-|   |   CRQ001.v0.transmission.yml #(facultatif)
-│   │
-│   └───Gabarits #(facultatif)
-│       │   formulaire.pdf
-│       │   gabarit.docx
-│       │   etc ...
+└──📁 CRQ001
+│  │   CRQ001.v1.form.yml
+│  │   CRQ001.v1.bind.yml #(facultatif)
+|  |   CRQ001.v0.transmission.yml #(facultatif)
+│  │
+│  └──📁 Gabarits #(facultatif)
+│     │   formulaire.pdf
+│     │   gabarit.docx
+│     │   etc ...
 │   
-└───AUTREFORM
-    │   AUTREFORM.v1.form.yml
-    │   etc...
+└──📁 AUTREFORM
+   │   AUTREFORM.v1.form.yml
+   │   etc...
 ```
 
 > Cette étape permet de ne sélectionner qu'un seul formulaire, si vous désirez déployer plus d'un formulaire à toutes les fois, il est possible de sélectionner plus d'un dossier. Notez cependant que l'arborescence finale dans votre staging doit être d'un répertoire par formulaire (chaque répertoire de formulaire contenant ses fichiers de config. form, transmission et autres)
