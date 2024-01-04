@@ -37,6 +37,25 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 
 > Cette étape permet de ne sélectionner qu'un seul formulaire, si vous désirez déployer plus d'un formulaire à toutes les fois, il est possible de sélectionner plus d'un dossier. Notez cependant que l'arborescence finale dans votre staging doit être d'un répertoire par formulaire (chaque répertoire de formulaire contenant ses fichiers de config. form, transmission et autres)
 
+## Nettoyage
+
+`à venir bientôt` 
+
+Il est maintenant possible pour vous de "nettoyer" (supprimer le répertoire) des formulaires devenus désuets, par exemple des formulaires de tests. 
+
+Pour ce faire, il suffit d'inclure un fichier nommé `nettoyage.yml` dans un des répertoires déployés ou à la racine.
+
+La syntaxe à respecter à l'intérieur du fichier est la suivante : 
+
+```yaml
+nettoyer:
+  dossiersFormulaire:
+    - TESTFORM1
+    - TESTFORM2
+    - MACFORM
+```
+Les répertoires correspondants seront supprimés puis le reste du déploiement s'effectue normalement.
+
 ## Lancez ensuite l'outil de déploiement des formulaires
 
 Voici un exemple de configuration avec l'interface graphique:
