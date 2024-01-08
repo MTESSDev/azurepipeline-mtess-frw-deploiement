@@ -19,7 +19,8 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 📁 staging
 │    default.v0.yml  #(facultatif, s'appliquera à TOUS les formulaires)  
 │    transmission.v0.yaml #(facultatif, s'appliquera à TOUS les formulaires)    
-│
+│    nettoyage.yml (facultatif)
+|
 └──📁 CRQ001
 │  │   CRQ001.v1.form.yml
 │  │   CRQ001.v1.bind.yml #(facultatif)
@@ -43,7 +44,7 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 
 Il est maintenant possible pour vous de "nettoyer" (supprimer le répertoire) des formulaires devenus désuets, par exemple des formulaires de tests. 
 
-Pour ce faire, il suffit d'inclure un fichier nommé `nettoyage.yml` dans un des répertoires déployés ou à la racine.
+Pour ce faire, il suffit d'inclure un fichier nommé `nettoyage.yml` à la racine du répertoire "staging".
 
 La syntaxe à respecter à l'intérieur du fichier est la suivante : 
 
