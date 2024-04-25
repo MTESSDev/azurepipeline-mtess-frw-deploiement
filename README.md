@@ -40,8 +40,6 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 
 ## Nettoyage
 
-`à venir bientôt` 
-
 Il est maintenant possible pour vous de "nettoyer" (supprimer le répertoire) des formulaires devenus désuets, par exemple des formulaires de tests. 
 
 Pour ce faire, il suffit d'inclure un fichier nommé `nettoyage.yml` à la racine du répertoire "staging".
