@@ -12,7 +12,7 @@ Par la suite, elle sera disponible dans la liste des extensions des pipelines de
 
 ![Configuration copie](images/screen2.png)
 
-Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop" (dépôt drop créé lors d'un build déclenché au commit) git vers le répertoire de staging du même nom soit `CRQ001`.
+Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop" (dépôt drop créé lors d'un build déclenché au commit) git vers le répertoire de staging du même nom soit `CRQ001`. Veuillez noter que le nombre de caractères maximum pour le nom des projets (dossiers et fichiers) est limité à 30 caractères.
 
 #### Exemple d'arborescence
 ```yaml
@@ -21,8 +21,8 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 │    transmission.v0.yaml #(facultatif, s'appliquera à TOUS les formulaires)    
 │    nettoyage.yml (facultatif)
 |
-└──📁 CRQ001
-│  │   CRQ001.v1.form.yml
+└──📁 CRQ001 #(max 30 caractères)
+│  │   CRQ001.v1.form.yml 
 │  │   CRQ001.v1.bind.yml #(facultatif)
 |  |   CRQ001.v0.transmission.yml #(facultatif)
 │  │
