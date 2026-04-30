@@ -20,6 +20,7 @@ Dans l'exemple ci-haut, nous copions le répertoire `CRQ001` depuis notre "drop"
 │    default.v0.yml  #(facultatif, s'appliquera à TOUS les formulaires)  
 │    transmission.v0.yaml #(facultatif, s'appliquera à TOUS les formulaires)    
 │    nettoyage.yml (facultatif)
+│    partenairesExternes.yml (facultatif)
 |
 └──📁 CRQ001 #(max 30 caractères)
 │  │   CRQ001.v1.form.yml 
@@ -54,6 +55,16 @@ nettoyer:
     - MACFORM
 ```
 Les répertoires correspondants seront supprimés puis le reste du déploiement s'effectue normalement.
+
+# Partenaires externes
+
+> Disponible à partir de la release [2026.x](https://github.com/MTESSDev/FRW/releases)
+
+Pour configurer vos partenaires externes, il suffit d'inclure un fichier nommé `partenairesExternes.yml` à la racine du répertoire "staging".
+
+Vous référez à la section [Partenaires externes](https://github.com/MTESSDev/FRW/blob/feature/PartenaireExterne/Documentation/partenaires-externes.md) de FRW pour tout le détail entourant cette fonctionnalité, incluant la syntaxe à utiliser.
+
+<!-- TODO mettre à jour le lien pour branche main -->
 
 ## Lancez ensuite l'outil de déploiement des formulaires
 
