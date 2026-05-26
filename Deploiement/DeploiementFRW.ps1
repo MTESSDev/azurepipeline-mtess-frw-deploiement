@@ -78,25 +78,32 @@ Write-Output "Transmettre au service web..."
 try {
     #Force Tls1.2 parce que notre serveur est très sécurisé
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    $result = Invoke-RestMethod -Method Post -Uri $Uri -ContentType $contentType -Headers $headers -Body $body -ErrorVariable oErr
+    $result = Invoke-RestMethod -Method Post -Uri $Uri -ContentType $contentType -Headers $headers -Body $body
 }
 catch
 {
-    if($oErr)
-    {
-        Write-Error "Message: $oErr"
-    }
     Write-Host "Echec du transfert."
 	Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__ 
     Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription
-    $result = $_.Exception.Response.GetResponseStream()
-    $reader = New-Object System.IO.StreamReader($result)
-    $responseBody = $reader.ReadToEnd();
-    Write-Error "Message: $responseBody"
+    $responseBody = $null
+    $responseStream = if ($_.Exception.Response) { $_.Exception.Response.GetResponseStream() } else { $null }
+    if ($responseStream) {
+        $reader = New-Object System.IO.StreamReader($responseStream)
+        $responseBody = $reader.ReadToEnd()
+        $reader.Close()
+    }
+    if ($responseBody) {
+        Write-Error "Reponse serveur: $responseBody"
+    }
+    Write-Error "Exception: $($_.Exception.Message)"
 
     if ($null -ne $PSCmdlet){
         $PSCmdlet.ThrowTerminatingError($_)
     }
+}
+finally
+{
+    Remove-Item $tempZipFilename -ErrorAction SilentlyContinue
 }
 
 Write-Output "Termine."
